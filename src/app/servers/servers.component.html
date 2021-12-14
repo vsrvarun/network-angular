@@ -1,0 +1,11 @@
+<div class="border mb-4 p-4 bg-white">
+    <div class="d-flex justify-content-between">
+        <h5 class="text-uppercase">{{ element.name }}</h5>
+        <p [ngClass]="element.status == 'Online' ? 'text-success':'text-danger'">{{ element.status }}</p>
+    </div>
+    <hr>
+    <div>
+        <p [ngClass]="element.type == 'Server' ? 'text-primary':'text-info'"><span class="font-weight-bold">{{ element.type }}</span></p>
+        <p>{{ element.content }}</p>
+    </div>
+</div>

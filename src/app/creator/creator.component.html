@@ -1,0 +1,20 @@
+<div class="form-group">
+    <label for="">Machine type: </label> <br>
+    <div class="form-check form-check-inline">
+        <input [(ngModel)]="serverType" class="form-check-input" type="radio" name="machineType" id="serverSelect" value="Server">
+        <label class="form-check-label" for="serverSelect">Server</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="machineType" id="blueSelect" value="BluePrint">
+        <label class="form-check-label" for="blueSelect">BluePrint</label>
+    </div>
+</div>
+<div class="form-group">
+    <label for="">Name: </label>
+    <input [(ngModel)]="machineName" class="form-control" type="text">
+</div>
+<div class="form-group">
+    <label for="">Content: </label>
+    <input [(ngModel)]="machineContent" class="form-control" type="text">
+</div>
+<button (click)="sendData()" class="btn btn-primary">Add Machine</button>

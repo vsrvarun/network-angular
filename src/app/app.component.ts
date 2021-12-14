@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'network';
+  servers: any[] = [];
+
+  setData(deviceData: {type: string; status:string; name: string; content: string}) {
+    this.servers.push({
+      type: deviceData.type,
+      status: deviceData.status,
+      name: deviceData.name,
+      content: deviceData.content
+    });
+  }
 }
